@@ -1,3 +1,5 @@
+using System.Security.Cryptography.Pkcs;
+
 namespace ZbW.ProgrammingFoundationShort.Lessons.Module03.Auftrag3_SichererDateiLeser;
 
 // ============================================================
@@ -20,11 +22,33 @@ public partial class SichererDateiLeserForm : Form
     InitializeComponent();
   }
 
+ 
   private void CmdLesen_Click(object sender, EventArgs e)
   {
+    CmdLesen.Enabled = false;
     LstZeilen.Items.Clear();
 
     // TODO 1: try-catch-finally starten
+    try
+    {
+      string[] zeilen = File.ReadAllLines(TxtPfad.Text);
+      for (int i = 0; i < zeilen.Length; i++)
+      {
+        LstZeilen.Items.Add($"{i + 1}: {zeilen[i]}");
+      }
+    }
+    catch (FileNotFoundException ex)
+    {
+      MessageBox.Show($"Datei nicht gefunden: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+    catch (Exception ex)
+    {
+      MessageBox.Show($"Allgemeiner Fehler: {ex.Message}", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+    finally
+    {
+      CmdLesen.Enabled = true;
+    }
 
     // TODO 2: im try-Block:
     //         string[] zeilen = File.ReadAllLines(TxtPfad.Text);

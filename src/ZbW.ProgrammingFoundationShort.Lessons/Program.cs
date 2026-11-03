@@ -14,7 +14,7 @@ internal static class Program
     ApplicationConfiguration.Initialize();
 
     // ---- Modul 01 ----
-    // ZbW.ProgrammingFoundationShort.Lessons.Module01.Auftrag1_Taschenrechner.Taschenrechner.Start();
+    //ZbW.ProgrammingFoundationShort.Lessons.Module01.Auftrag1_Taschenrechner.Taschenrechner.Start();
     // Application.Run(new ZbW.ProgrammingFoundationShort.Lessons.Module01.Auftrag2_Temperaturrechner.TemperaturrechnerForm());
     // ZbW.ProgrammingFoundationShort.Lessons.Module01.Auftrag3_DatentypQuiz.DatentypQuiz.Start();
 
@@ -26,7 +26,7 @@ internal static class Program
     // ---- Modul 03 ----
     // ZbW.ProgrammingFoundationShort.Lessons.Module03.Auftrag1_Zahlenraten.Zahlenraten.Start();
     // ZbW.ProgrammingFoundationShort.Lessons.Module03.Auftrag2_PasswortValidator.PasswortValidator.Start();
-    // Application.Run(new ZbW.ProgrammingFoundationShort.Lessons.Module03.Auftrag3_SichererDateiLeser.SichererDateiLeserForm());
+     Application.Run(new ZbW.ProgrammingFoundationShort.Lessons.Module03.Auftrag3_SichererDateiLeser.SichererDateiLeserForm());
 
     // ---- Modul 04 ----
     // ZbW.ProgrammingFoundationShort.Lessons.Module04.Auftrag1_StatistikRechner.StatistikRechner.Start();
