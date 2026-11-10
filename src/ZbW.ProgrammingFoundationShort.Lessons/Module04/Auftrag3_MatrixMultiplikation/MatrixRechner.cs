@@ -20,6 +20,10 @@ public static class MatrixRechner
     //         int[,] b = { {5, 6}, {7, 8} };
 
     // TODO 2: Multiply aufrufen und Ergebnis ausgeben
+
+    int[,] a = { { 1, 2 }, { 3, 4 } };
+    int[,] b = { { 5, 6 }, { 7, 8 } };
+    int[,] result = Multiply(a, b);
   }
 
   public static int[,] Multiply(int[,] a, int[,] b)
